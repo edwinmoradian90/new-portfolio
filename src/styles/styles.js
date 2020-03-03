@@ -18,7 +18,7 @@ export const Header = styled.h1`
 `;
 
 export const SubHeader = styled.p`
-    color: ${colors.white};
+    color: ${colors.lightGray};
     padding: 40px 0px;
     font-family: "Open Sans Condensed";
     font-size: 0.8em;
@@ -36,6 +36,7 @@ export const Input = styled.input`
     color: ${colors.blue};
     padding: 10px;
     margin: 20px 20px 20px 0;
+    width: 100%;
 `;
 
 export const TextArea = styled.textarea`
@@ -46,6 +47,7 @@ export const TextArea = styled.textarea`
     padding: 10px;
     margin: 20px 20px 20px 0;
     resize: none;
+    width: 100%;
 `;
 
 export const Button = styled.button`

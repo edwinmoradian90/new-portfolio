@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavbarView from "./NavbarView";
-import { MdCode, MdHome, MdMarkunread, MdPerson } from "react-icons/md";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { MdHome, MdMarkunread, MdPerson } from "react-icons/md";
+import { FiGithub, FiLinkedin, FiCodesandbox } from "react-icons/fi";
 
 class Navbar extends Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class Navbar extends Component {
                 },
                 {
                     name: "Projects",
-                    component: <MdCode id={2} />,
+                    component: <FiCodesandbox id={2} />,
                     link: "/projects",
                     id: 2,
                     active: false,

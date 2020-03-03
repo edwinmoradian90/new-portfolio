@@ -8,20 +8,26 @@ import {
     TextArea,
     Button
 } from "../../styles/styles";
+import Typical from "react-typical";
 
 const ContactView = props => {
     return (
         <Container>
             <div className="d-flex justify-content-around">
                 <div>
-                    <Header>Contact</Header>
+                    <Header>
+                        <Typical
+                            steps={["", 1000, "Contact.", 5000]}
+                            loop={Infinity}
+                        />
+                    </Header>
                     <SubHeader>
                         If you have any questions, feel free to send me an
                         email.
                     </SubHeader>
                 </div>
                 <Form action="">
-                    <div>
+                    <div className="d-flex">
                         <Input placeholder="Name" type="text" />
                         <Input placeholder="Email" type="text" />
                     </div>

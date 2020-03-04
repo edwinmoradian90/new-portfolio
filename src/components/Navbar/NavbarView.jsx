@@ -5,20 +5,35 @@ import { Link } from "react-router-dom";
 
 const Navbar = styled.div`
     background: ${colors.black};
-    border-right: 2px solid ${colors.blue};
     border-bottom: 2px solid ${colors.blue};
     height: 100vh;
     width: 80px;
+    z-index: 1000;
+
+    @media (max-width: 767px) {
+        height: 80px;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
 `;
 
 const List = styled.ul`
     align-items: center;
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     list-style: none;
     width: 100%;
+
+    @media (max-width: 767px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 `;
 
 const StyledLink = styled(Link)`
@@ -39,6 +54,7 @@ const ListItem = styled(StyledLink)`
 
 const ActiveListItem = styled(ListItem)`
     color: ${colors.blue};
+    text-decoration: none;
 `;
 
 const NavbarView = props => {
@@ -50,25 +66,21 @@ const NavbarView = props => {
                     return icon.active ? (
                         <ActiveListItem
                             to={icon.link}
-                            onMouseEnter={props.toggleHover}
-                            onMouseLeave={props.toggleHover}
                             key={icon.id}
                             id={icon.id}
                             className="navigation-item"
                         >
-                            {icon.hovered ? icon.name : icon.component}
+                            {icon.component}
                         </ActiveListItem>
                     ) : (
                         <ListItem
                             to={icon.link}
-                            onMouseEnter={props.toggleHover}
-                            onMouseLeave={props.toggleHover}
                             onClick={props.setActive}
                             key={icon.id}
                             id={icon.id}
                             className="navigation-item"
                         >
-                            {icon.hovered ? icon.name : icon.component}
+                            {icon.component}
                         </ListItem>
                     );
                 })}

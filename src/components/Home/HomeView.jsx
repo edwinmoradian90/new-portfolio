@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Header } from "../../styles/styles";
+import { Container, Header, Logo } from "../../styles/styles";
 import colors from "../../styles/colors/colors";
 import { MdComputer, MdMusicNote } from "react-icons/md";
 import { DiAtom } from "react-icons/di";
@@ -13,6 +13,13 @@ const CardContainer = styled.div`
     justify-content: space-between;
     height: 400px;
     width: 300px;
+
+    @media (max-width: 767px) and (orientation: portrait) {
+        margin: auto;
+        justify-content: center;
+        height: calc(100vh - 80px);
+        width: 100vw;
+    }
 `;
 
 const SubHeader = styled.p`
@@ -34,16 +41,6 @@ const Contact = styled.p`
     &:hover {
         background: ${colors.blue};
         color: ${colors.lightBlack};
-    }
-`;
-
-const Logo = styled.h1`
-    padding-right: 40px;
-    font-size: 2em;
-    transition: 1s;
-    &:hover {
-        color: ${colors.blue};
-        transform: rotate(20deg);
     }
 `;
 

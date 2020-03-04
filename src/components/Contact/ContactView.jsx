@@ -12,12 +12,19 @@ import Typical from "react-typical";
 
 const ContactView = props => {
     return (
-        <Container>
+        <Container className="m-auto justify-content-center">
             <div className="d-flex justify-content-around">
                 <div>
                     <Header>
                         <Typical
-                            steps={["", 1000, "Contact.", 5000]}
+                            steps={[
+                                "",
+                                1000,
+                                "Get in touch.",
+                                5000,
+                                "Contact me.",
+                                5000
+                            ]}
                             loop={Infinity}
                         />
                     </Header>

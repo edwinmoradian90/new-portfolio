@@ -65,12 +65,6 @@ class Navbar extends Component {
         return this.state.icons[e.target.id].name;
     };
 
-    toggleHover = e => {
-        const icons = this.state.icons;
-        icons[e.target.id].hovered = !icons[e.target.id].hovered;
-        this.setState({ icons });
-    };
-
     setActive = e => {
         e.preventDefault();
         let icons = this.state.icons;
@@ -87,7 +81,6 @@ class Navbar extends Component {
         return (
             <div>
                 <NavbarView
-                    toggleHover={this.toggleHover}
                     getIconName={this.getIconName}
                     setActive={this.setActive}
                     icons={this.state.icons}

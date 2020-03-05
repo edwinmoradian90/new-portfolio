@@ -1,4 +1,8 @@
 import React from "react";
+import battleship from '../../assets/images/battleship.jpg';
+import newsweek from '../../assets/images/newsweek.jpg';
+import ecommerce from '../../assets/images/ecommerce.jpg';
+
 import {
     Container,
     Header,
@@ -28,6 +32,16 @@ const InfoContainer = styled.div`
 const ProjectContainer = styled.div`
     width: 100%;
 `;
+
+const Image = styled.img`
+    height: 100%;
+    transition: .4s;
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+`
 
 const ProjectsView = props => {
     return (
@@ -101,18 +115,18 @@ const ProjectsView = props => {
                     <div className="container">
                         <div className="row d-flex justify-content-center mt-5">
                             <Column className="col-12 col-xs-12 col-sm-12 col-md-3">
-                                Battleship Game in Js
+                                <Image src={battleship} alt="battleship"/>
                             </Column>
                             <Column className="col-12 col-xs-12 col-sm-12 col-md-3">
-                                Newsweek Clone
+                                <Image src={newsweek} alt="newsweek" />
                             </Column>
                             <Column className="col-12 col-xs-12 col-sm-12 col-md-3">
-                                Ecommerce store
+                                <Image src={ecommerce} alt="ecommerce" />
                             </Column>
                         </div>
                         <div className="row d-flex justify-content-center">
                             <Column className="col col-sm-12 col-md-3">
-                                Facebook clone
+                                <Image />
                             </Column>
                             <Column className="col col-sm-12 col-md-3">
                                 Chat app with rails

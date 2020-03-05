@@ -52,7 +52,7 @@ class Navbar extends Component {
                 {
                     name: "LinkedIn",
                     component: <FiLinkedin id={5} />,
-                    link: "https:linkedin.com/in/edwinmoradian90",
+                    link: "https:linkedin.com/in/edwin-moradian",
                     id: 5,
                     active: false,
                     hovered: false

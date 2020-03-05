@@ -107,7 +107,7 @@ export const Column = styled.div`
     max-height: 200px;
     font-family: "Open Sans";
     box-sizing: border-box;
-    padding: 10px 10px;
+    padding: 0;
     width: 100%;
     min-width: 200px;
     margin: 10px 10px;

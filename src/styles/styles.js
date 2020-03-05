@@ -14,6 +14,7 @@ export const Container = styled.section`
 
     @media (max-width: 767px) {
         padding: 10px;
+        box-sizing: border-box;
         min-height: 100vh;
         width: 100vw;
     }
@@ -88,6 +89,7 @@ export const Button = styled.button`
 export const Logo = styled.h1`
     font-size: 2em;
     margin-right: 10px;
+    padding: 20px 20px 20px 0;
     transition: 1s;
     &:hover {
         color: ${colors.blue};
@@ -112,7 +114,7 @@ export const Column = styled.div`
     background: ${colors.blue};
 
     @media (max-width: 576px) {
-        min-width: 100%;
-        width: 100%;
+        max-width: 100vw;
+        width: 100vw;
     }
 `;

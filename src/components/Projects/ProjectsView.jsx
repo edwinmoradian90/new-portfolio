@@ -25,6 +25,10 @@ const InfoContainer = styled.div`
     width: 400px;
 `;
 
+const ProjectContainer = styled.div`
+    width: 100%;
+`;
+
 const ProjectsView = props => {
     return (
         <Container>
@@ -93,7 +97,7 @@ const ProjectsView = props => {
                         </Logo>
                     </LogoContainer>
                 </InfoContainer>
-                <div>
+                <ProjectContainer>
                     <div className="container">
                         <div className="row d-flex justify-content-center mt-5">
                             <Column className="col-12 col-xs-12 col-sm-12 col-md-3">
@@ -118,7 +122,7 @@ const ProjectsView = props => {
                             </Column>
                         </div>
                     </div>
-                </div>
+                </ProjectContainer>
             </div>
         </Container>
     );

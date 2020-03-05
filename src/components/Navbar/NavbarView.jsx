@@ -52,6 +52,19 @@ const ListItem = styled(StyledLink)`
     }
 `;
 
+const ATagLink = styled.a`
+    color: ${colors.lightBlack};
+    cursor: pointer;
+    font-size: 20px;
+    padding: 20px 10px;
+    transition: 0.5s;
+    text-decoration: none;
+    &:hover {
+        border: 0;
+        color: ${colors.blue};
+    }
+`;
+
 const ActiveListItem = styled(ListItem)`
     color: ${colors.blue};
     text-decoration: none;
@@ -63,26 +76,34 @@ const NavbarView = props => {
         <Navbar className="navigation-container">
             <List className="navigation-menu">
                 {props.icons.map((icon, i) => {
-                    return icon.active ? (
-                        <ActiveListItem
-                            to={icon.link}
-                            key={icon.id}
-                            id={icon.id}
-                            className="navigation-item"
-                        >
-                            {icon.component}
-                        </ActiveListItem>
-                    ) : (
-                        <ListItem
-                            to={icon.link}
-                            onClick={props.setActive}
-                            key={icon.id}
-                            id={icon.id}
-                            className="navigation-item"
-                        >
-                            {icon.component}
-                        </ListItem>
-                    );
+                    if (icon.id < 3) {
+                        return icon.active ? (
+                            <ActiveListItem
+                                to={icon.link}
+                                key={icon.id}
+                                id={icon.id}
+                                className="navigation-item"
+                            >
+                                {icon.component}
+                            </ActiveListItem>
+                        ) : (
+                            <ListItem
+                                to={icon.link}
+                                onClick={props.setActive}
+                                key={icon.id}
+                                id={icon.id}
+                                className="navigation-item"
+                            >
+                                {icon.component}
+                            </ListItem>
+                        );
+                    } else {
+                        return (
+                            <ATagLink target="_blank" href={icon.link}>
+                                {icon.component}
+                            </ATagLink>
+                        );
+                    }
                 })}
             </List>
         </Navbar>

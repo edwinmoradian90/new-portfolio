@@ -36,7 +36,7 @@ class Navbar extends Component {
                 {
                     name: "Contact",
                     component: <MdMarkunread id={3} />,
-                    link: "/contact",
+                    link: "mailto:edwin.moradian90@gmail.com",
                     id: 3,
                     active: false,
                     hovered: false

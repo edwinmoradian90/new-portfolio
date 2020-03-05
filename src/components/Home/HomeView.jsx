@@ -14,7 +14,7 @@ const CardContainer = styled.div`
     height: 400px;
     width: 300px;
 
-    @media (max-width: 767px) and (orientation: portrait) {
+    @media (max-width: 767px) {
         margin: auto;
         justify-content: center;
         height: calc(100vh - 80px);
@@ -37,7 +37,7 @@ const Contact = styled.p`
     padding: 10px 30px;
     text-align: center;
     transition: 1s;
-    width: 250px;
+    width: 270px;
     &:hover {
         background: ${colors.blue};
         color: ${colors.lightBlack};
@@ -67,7 +67,7 @@ const HomeView = props => {
                             loop={Infinity}
                         />
                     </Header>
-                    <SubHeader className="d-flex">
+                    <SubHeader className="d-flex justify-content-between">
                         <Logo>
                             <MdComputer />
                         </Logo>{" "}

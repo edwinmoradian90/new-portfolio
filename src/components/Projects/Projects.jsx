@@ -18,10 +18,11 @@ class Projects extends Component {
     super(props);
 
     this.state = {
+      selectedProject: "",
       projects: [
-        { name: "Battleship", id: 0, image: battleship },
-        { name: "News Week Clone", id: 1, image: newsweek },
-        { name: "Ecommerce", id: 2, image: ecommerce }
+        { name: "Battleship", id: 0, image: battleship, selected: false },
+        { name: "News Week Clone", id: 1, image: newsweek, selected: false },
+        { name: "Ecommerce", id: 2, image: ecommerce, selected: false }
       ],
       logos: [
         <IoLogoJavascript />,
@@ -37,10 +38,36 @@ class Projects extends Component {
     };
   }
 
+  selectProject = e => {
+    const selectedId = parseInt(e.target.id);
+    console.log(selectedId);
+    this.state.projects.forEach(project => {
+      console.log(selectedId, project.id);
+      if (selectedId === project.id) {
+        project.selected = true;
+        this.setState(
+          {
+            ...this.state,
+            selectedProject: project,
+            projects: [...this.state.projects, project]
+          },
+          () => {
+            console.log("selected");
+          }
+        );
+      }
+    });
+  };
+
   render() {
     return (
       <div>
-        <ProjectsView projects={this.state.projects} logos={this.state.logos} />
+        <ProjectsView
+          selectProject={this.selectProject}
+          selectedProject={this.state.selectedProject}
+          projects={this.state.projects}
+          logos={this.state.logos}
+        />
       </div>
     );
   }

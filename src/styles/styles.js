@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import colors from "../styles/colors/colors";
 
-export const AppContainer = styled.div``;
+export const AppContainer = styled.div ``;
 
-export const Container = styled.section`
+export const Container = styled.section `
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -20,13 +20,13 @@ export const Container = styled.section`
     }
 `;
 
-export const Header = styled.h1`
+export const Header = styled.h1 `
     color: ${colors.blue};
     font-size: 3em;
     font-family: "Montserrat";
 `;
 
-export const SubHeader = styled.p`
+export const SubHeader = styled.div `
     color: ${colors.lightGray};
     padding: 40px 0px;
     font-family: "Open Sans Condensed";
@@ -41,11 +41,11 @@ export const SubHeader = styled.p`
     }
 `;
 
-export const Form = styled.form`
+export const Form = styled.form `
     width: 500px;
 `;
 
-export const Input = styled.input`
+export const Input = styled.input `
     border: 0;
     background: ${colors.lightBlack};
     color: ${colors.lightGray};
@@ -58,7 +58,7 @@ export const Input = styled.input`
     }
 `;
 
-export const TextArea = styled.textarea`
+export const TextArea = styled.textarea `
     border: 0;
     background: ${colors.lightBlack};
     color: ${colors.lightGray};
@@ -72,7 +72,7 @@ export const TextArea = styled.textarea`
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button `
     background: ${colors.black};
     border: 1px solid ${colors.blue};
     border-radius: 3px;
@@ -86,7 +86,7 @@ export const Button = styled.button`
     }
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled.div `
     font-size: 2em;
     margin-right: 10px;
     padding: 20px 20px 20px 0;
@@ -97,11 +97,11 @@ export const Logo = styled.h1`
     }
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.div `
     max-width: 100%;
 `;
 
-export const Column = styled.div`
+export const Column = styled.div `
     color: ${colors.lightBlack};
     font-family: "Montserrat";
     font-size: 20px;

@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "./Modal";
 import {
   Container,
   Header,
@@ -69,7 +70,9 @@ const ProjectsView = props => {
               {props.projects.map(project => {
                 return (
                   <Column
+                    onClick={props.selectProject}
                     key={project.id}
+                    id={project.id}
                     background={project.image}
                     className="col-12 col-xs-12 col-sm-12 col-md-3"
                   />

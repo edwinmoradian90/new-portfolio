@@ -15,7 +15,6 @@ class Navbar extends Component {
                     link: "/",
                     id: 0,
                     active: true,
-                    hovered: false
                 },
                 {
                     name: "About",
@@ -23,7 +22,6 @@ class Navbar extends Component {
                     link: "/about",
                     id: 1,
                     active: false,
-                    hovered: false
                 },
                 {
                     name: "Projects",
@@ -31,7 +29,6 @@ class Navbar extends Component {
                     link: "/projects",
                     id: 2,
                     active: false,
-                    hovered: false
                 },
                 {
                     name: "Contact",
@@ -39,7 +36,6 @@ class Navbar extends Component {
                     link: "mailto:edwin.moradian90@gmail.com",
                     id: 3,
                     active: false,
-                    hovered: false
                 },
                 {
                     name: "Github",
@@ -47,7 +43,6 @@ class Navbar extends Component {
                     link: "https://github.com/edwinmoradian90",
                     id: 4,
                     active: false,
-                    hovered: false
                 },
                 {
                     name: "LinkedIn",
@@ -55,7 +50,6 @@ class Navbar extends Component {
                     link: "https:linkedin.com/in/edwin-moradian",
                     id: 5,
                     active: false,
-                    hovered: false
                 }
             ]
         };

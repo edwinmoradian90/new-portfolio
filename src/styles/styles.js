@@ -102,16 +102,27 @@ export const LogoContainer = styled.div`
 `;
 
 export const Column = styled.div`
+    color: ${colors.lightBlack};
+    font-family: "Montserrat";
+    font-size: 20px;
     height: auto;
     min-height: 200px;
     max-height: 200px;
-    font-family: "Open Sans";
     box-sizing: border-box;
     padding: 0;
     width: 100%;
     min-width: 200px;
     margin: 10px 10px;
-    background: ${colors.blue};
+    transition: .4s;
+    text-align: center;
+    background: url(${props => props.background});
+    background-size: auto;
+    background-position: center;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
 
     @media (max-width: 576px) {
         max-width: 100vw;

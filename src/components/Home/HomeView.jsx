@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Header, Logo } from "../../styles/styles";
 import colors from "../../styles/colors/colors";
-import { MdComputer, MdMusicNote } from "react-icons/md";
-import { DiAtom } from "react-icons/di";
-import { GiCoffeeCup } from "react-icons/gi";
 import Typical from "react-typical";
 
 const CardContainer = styled.div`
@@ -28,7 +25,7 @@ const SubHeader = styled.div`
   margin-bottom: 30px;
 `;
 
-const Contact = styled.p`
+const Contact = styled.a`
   border: 2px solid ${colors.blue};
   border-radius: 3px;
   color: ${colors.blue};
@@ -68,20 +65,18 @@ const HomeView = props => {
             />
           </Header>
           <SubHeader className="d-flex justify-content-between">
-            <Logo>
-              <MdComputer />
-            </Logo>{" "}
-            <Logo>
-              <DiAtom />
-            </Logo>{" "}
-            <Logo>
-              <MdMusicNote />
-            </Logo>
-            <Logo>
-              <GiCoffeeCup />
-            </Logo>
+            {props.logos.map((logo, i) => {
+              return <Logo key={i}>{logo}</Logo>;
+            })}
           </SubHeader>
-          <Contact>CONTACT ME</Contact>
+          <Contact
+            className="text-decoration-none"
+            href="mailto:edwin.moradian90@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CONTACT ME
+          </Contact>
         </CardContainer>
       </div>
     </Container>

@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "./Modal";
+import colors from "../../styles/colors/colors";
 import {
   Container,
   Header,
@@ -19,6 +19,30 @@ const InfoContainer = styled.div`
 
 const ProjectContainer = styled.div`
   width: 100%;
+`;
+
+const LinkContainer = styled.div`
+  background: ${colors.black};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+`;
+
+const ProjectLink = styled.p`
+  padding: 20px;
+  transition: 0.4s;
+
+  &:hover {
+    color: ${colors.blue};
+  }
 `;
 
 const ProjectsView = props => {
@@ -75,7 +99,31 @@ const ProjectsView = props => {
                     id={project.id}
                     background={project.image}
                     className="col-12 col-xs-12 col-sm-12 col-md-3"
-                  />
+                  >
+                    <LinkContainer>
+                      <p>{project.name}</p>
+                      <div className="d-flex justify-content-center">
+                        <ProjectLink>
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github
+                          </a>
+                        </ProjectLink>
+                        <ProjectLink>
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Demo
+                          </a>
+                        </ProjectLink>
+                      </div>
+                    </LinkContainer>
+                  </Column>
                 );
               })}
             </div>

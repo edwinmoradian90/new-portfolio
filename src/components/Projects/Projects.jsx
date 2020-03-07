@@ -20,16 +20,39 @@ class Projects extends Component {
     this.state = {
       selectedProject: "",
       projects: [
-        { name: "Battleship", id: 0, image: battleship, selected: false },
-        { name: "News Week Clone", id: 1, image: newsweek, selected: false },
-        { name: "Ecommerce", id: 2, image: ecommerce, selected: false }
+        {
+          name: "Battleship",
+          id: 0,
+          image: battleship,
+          selected: false,
+          github:
+            "https://github.com/edwinmoradian90/battleship/tree/battleship-features",
+          demo:
+            "https://raw.githack.com/edwinmoradian90/battleship/battleship-features/dist/index.html"
+        },
+        {
+          name: "News Week Clone",
+          id: 1,
+          image: newsweek,
+          selected: false,
+          github: "https://github.com/edwinmoradian90/newsweek-clone-bootstrap",
+          demo:
+            "https://raw.githack.com/edwinmoradian90/newsweek-clone-bootstrap/master/index.html"
+        },
+        {
+          name: "Ecommerce",
+          id: 2,
+          image: ecommerce,
+          selected: false,
+          github: "https://github.com/edwinmoradian90/ecommerce_webapp",
+          demo: "https://stark-coast-27283.herokuapp.com/"
+        }
       ],
       logos: [
         <IoLogoJavascript />,
         <DiReact />,
         <DiRor />,
         <DiRubyRough />,
-        <IoLogoNodejs />,
         <IoLogoHtml5 />,
         <IoLogoCss3 />,
         <IoLogoSass />,

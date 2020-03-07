@@ -88,8 +88,8 @@ const NavbarView = props => {
               </ActiveListItem>
             ) : (
               <ListItem
+                onClick={props.setCurrentPage}
                 to={icon.link}
-                onClick={props.setActive}
                 key={icon.id}
                 id={icon.id}
                 className="navigation-item"

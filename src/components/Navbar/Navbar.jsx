@@ -8,6 +8,7 @@ class Navbar extends Component {
     super(props);
 
     this.state = {
+      currentPage: "",
       icons: [
         {
           name: "Home",
@@ -56,14 +57,14 @@ class Navbar extends Component {
   }
 
   componentDidMount = () => {
-    this.onLoad();
+    this.loadActiveIcon();
   };
 
-  getIconName = e => {
-    return this.state.icons[e.target.id].name;
+  setCurrentPage = () => {
+    this.setState({ currentPage: window.location.pathname });
   };
 
-  onLoad = () => {
+  loadActiveIcon = () => {
     const path = window.location.pathname;
     const icons = this.state.icons;
     icons.forEach(icon => {
@@ -75,22 +76,18 @@ class Navbar extends Component {
     });
   };
 
-  setActive = e => {
-    e.preventDefault();
-    let icons = this.state.icons;
-    icons.forEach(icon => (icon.active = false));
-    icons[e.target.id].active = true;
-    this.setState({ icons }, () => {
-      console.log(this.state.icons);
-    });
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevState.currentPage !== this.state.currentPage) {
+      this.loadActiveIcon();
+    }
   };
 
   render() {
     return (
       <div>
         <NavbarView
+          setCurrentPage={this.setCurrentPage}
           getIconName={this.getIconName}
-          setActive={this.setActive}
           icons={this.state.icons}
         />
       </div>

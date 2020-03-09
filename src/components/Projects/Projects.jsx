@@ -8,10 +8,12 @@ import {
   IoLogoSass
 } from "react-icons/io";
 import { FaGit } from "react-icons/fa";
-import { DiRubyRough, DiRor, DiReact } from "react-icons/di";
+import { DiRubyRough, DiRor, DiReact, DiPostgresql } from "react-icons/di";
 import battleship from "../../assets/images/battleship.jpg";
 import newsweek from "../../assets/images/newsweek.jpg";
 import ecommerce from "../../assets/images/ecommerce.jpg";
+import tictactoe from "../../assets/images/tictactoe.jpg";
+import facebook from "../../assets/images/facebook.jpg";
 
 class Projects extends Component {
   constructor(props) {
@@ -46,6 +48,23 @@ class Projects extends Component {
           selected: false,
           github: "https://github.com/edwinmoradian90/ecommerce_webapp",
           demo: "https://stark-coast-27283.herokuapp.com/"
+        },
+        {
+          name: "Tic-Tac-Toe",
+          id: 3,
+          image: tictactoe,
+          selected: false,
+          github: "https://github.com/edwinmoradian90/tic-tac-toe_js",
+          demo:
+            "https://raw.githack.com/edwinmoradian90/tic-tac-toe_js/game-features/index.html"
+        },
+        {
+          name: "Facebook clone",
+          id: 4,
+          image: facebook,
+          selected: false,
+          github: "https://github.com/edwinmoradian90/odin-facebook",
+          demo: "https://cryptic-ridge-31466.herokuapp.com"
         }
       ],
       logos: [
@@ -53,6 +72,8 @@ class Projects extends Component {
         <DiReact />,
         <DiRor />,
         <DiRubyRough />,
+        <DiPostgresql />,
+        <IoLogoNodejs />,
         <IoLogoHtml5 />,
         <IoLogoCss3 />,
         <IoLogoSass />,

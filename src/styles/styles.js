@@ -90,7 +90,7 @@ export const Logo = styled.div `
     font-size: 2em;
     margin-right: 10px;
     padding: 20px 20px 20px 0;
-    transition: 1s;
+    transition: .5s;
     &:hover {
         color: ${colors.blue};
         transform: rotate(20deg);

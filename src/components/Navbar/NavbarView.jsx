@@ -79,6 +79,9 @@ const NavbarView = props => {
           if (icon.id < 3) {
             return icon.active ? (
               <ActiveListItem
+                data-toggle="tooltip"
+                data-placement="top"
+                title={icon.name}
                 to={icon.link}
                 key={icon.id}
                 id={icon.id}
@@ -88,6 +91,9 @@ const NavbarView = props => {
               </ActiveListItem>
             ) : (
               <ListItem
+                data-toggle="tooltip"
+                data-placement="top"
+                title={icon.name}
                 onClick={props.setCurrentPage}
                 to={icon.link}
                 key={icon.id}
@@ -99,7 +105,14 @@ const NavbarView = props => {
             );
           } else {
             return (
-              <ATagLink key={i} target="_blank" href={icon.link}>
+              <ATagLink
+                data-toggle="tooltip"
+                data-placement="top"
+                title={icon.name}
+                key={i}
+                target="_blank"
+                href={icon.link}
+              >
                 {icon.component}
               </ATagLink>
             );

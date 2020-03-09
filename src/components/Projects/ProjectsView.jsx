@@ -64,6 +64,8 @@ const ProjectsView = props => {
                 5000,
                 "Ruby.",
                 5000,
+                "PostgreSQL",
+                5000,
                 "Node.",
                 5000,
                 "HTML 5.",

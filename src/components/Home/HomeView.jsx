@@ -33,7 +33,7 @@ const Contact = styled.a`
   font-size: 0.7em;
   padding: 10px 30px;
   text-align: center;
-  transition: 1s;
+  transition: 0.5s;
   width: 270px;
   &:hover {
     background: ${colors.blue};

@@ -29,7 +29,7 @@ export const Header = styled.h1 `
 export const SubHeader = styled.div `
     color: ${colors.lightGray};
     padding: 40px 0px;
-    font-family: "Open Sans Condensed";
+    font-family: "Open Sans";
     font-size: 0.8em;
     letter-spacing: 3px;
     line-height: 20px;

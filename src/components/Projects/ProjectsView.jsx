@@ -79,10 +79,12 @@ const ProjectsView = props => {
             />
           </Header>
           <SubHeader>
-            I have worked with Node, Rails, React, Redux, JS, HTML, CSS, etc.
+            I have worked with Javascript, React, Rails, Ruby, PostgreSQL, Node,
+            HTML, CSS, Sass, and much more.
             <br />
-            But the majority of my work is in plain Javascript, Rails, or Rails
-            with React.
+            <br />
+            The majority of my work is in Javascript, Rails, or Rails with
+            React. Language and tool agonstic.
           </SubHeader>
           <LogoContainer className="d-flex flex-wrap justify-content-start">
             {props.logos.map((logo, i) => {

@@ -29,7 +29,6 @@ export const Container = styled.section `
 }};
 
     @media (max-width: 767px) {
-        padding: 10px;
         box-sizing: border-box;
         min-height: 100vh;
         width: 100vw;
@@ -67,7 +66,7 @@ export const Input = styled.input `
     color: ${colors.lightGray};
     padding: 10px;
     margin: 20px 20px 0px 0px;
-    transitions: 0.5s;
+    transition: 0.5s;
     width: 100%;
     &:focus {
         color: ${colors.blue};
@@ -144,4 +143,16 @@ export const Column = styled.div `
         max-width: 100vw;
         width: 100vw;
     }
+`;
+
+export const PageContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  background: ${props => (props.darkMode ? colors.black : colors.white)};
+  height: 100%;
+
+  @media (max-width:767px) {
+      height: auto;
+  }
+
 `;

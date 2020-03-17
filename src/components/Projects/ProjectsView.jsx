@@ -1,13 +1,15 @@
 import React from "react";
 import colors from "../../styles/colors/colors";
 import ReactLoading from "react-loading";
+import Wave from "react-wavify";
 import {
   Container,
   Header,
   SubHeader,
   Logo,
   LogoContainer,
-  Column
+  Column,
+  PageContainer
 } from "../../styles/styles";
 import Typical from "react-typical";
 import styled from "styled-components";
@@ -55,94 +57,107 @@ const ProjectsView = props => {
     );
   }
   return (
-    <Container darkMode={props.darkMode}>
-      <div className="d-flex flex-column flex-lg-row justify-content-md-around m-auto">
-        <InfoContainer className="m-auto d-flex flex-column justify-content-between">
-          <Header>
-            Projects. <br />
-            <Typical
-              steps={[
-                "",
-                2000,
-                "Javascript.",
-                5000,
-                "React.",
-                5000,
-                "Rails.",
-                5000,
-                "Ruby.",
-                5000,
-                "PostgreSQL",
-                5000,
-                "Node.",
-                5000,
-                "HTML 5.",
-                5000,
-                "CSS 3.",
-                5000,
-                "Sass.",
-                5000
-              ]}
-              loop={Infinity}
-            />
-          </Header>
-          <SubHeader>
-            I have worked with Javascript, React, Rails, Ruby, PostgreSQL, Node,
-            HTML, CSS, Sass, and much more.
-            <br />
-            <br />
-            The majority of my work is in Javascript, Rails, or Rails with
-            React. Language and tool agonstic.
-          </SubHeader>
-          <LogoContainer className="d-flex flex-wrap justify-content-start">
-            {props.logos.map((logo, i) => {
-              return <Logo key={i}>{logo}</Logo>;
-            })}
-          </LogoContainer>
-        </InfoContainer>
-        <ProjectContainer>
-          <div className="container">
-            <div className="d-flex justify-content-center mt-5 flex-wrap">
-              {props.projects.map(project => {
-                return (
-                  <Column
-                    onClick={props.selectProject}
-                    key={project.id}
-                    id={project.id}
-                    background={project.image}
-                    className="col-12 col-xs-12 col-sm-12 col-md-3"
-                  >
-                    <LinkContainer>
-                      <p>{project.name}</p>
-                      <div className="d-flex justify-content-center">
-                        <ProjectLink>
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Github
-                          </a>
-                        </ProjectLink>
-                        <ProjectLink>
-                          <a
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Demo
-                          </a>
-                        </ProjectLink>
-                      </div>
-                    </LinkContainer>
-                  </Column>
-                );
+    <PageContainer darkMode={props.darkMode}>
+      <Container darkMode={props.darkMode}>
+        <div className="d-flex flex-column flex-lg-row justify-content-md-around m-auto">
+          <InfoContainer className="m-auto d-flex flex-column justify-content-between">
+            <Header>
+              Projects. <br />
+              <Typical
+                steps={[
+                  "",
+                  2000,
+                  "Javascript.",
+                  5000,
+                  "React.",
+                  5000,
+                  "Rails.",
+                  5000,
+                  "Ruby.",
+                  5000,
+                  "PostgreSQL",
+                  5000,
+                  "Node.",
+                  5000,
+                  "HTML 5.",
+                  5000,
+                  "CSS 3.",
+                  5000,
+                  "Sass.",
+                  5000
+                ]}
+                loop={Infinity}
+              />
+            </Header>
+            <SubHeader>
+              I have worked with Javascript, React, Rails, Ruby, PostgreSQL,
+              Node, HTML, CSS, Sass, and much more.
+              <br />
+              <br />
+              The majority of my work is in Javascript, Rails, or Rails with
+              React. Language and tool agonstic.
+            </SubHeader>
+            <LogoContainer className="d-flex flex-wrap justify-content-start">
+              {props.logos.map((logo, i) => {
+                return <Logo key={i}>{logo}</Logo>;
               })}
+            </LogoContainer>
+          </InfoContainer>
+          <ProjectContainer>
+            <div className="container">
+              <div className="d-flex justify-content-center mt-5 flex-wrap">
+                {props.projects.map(project => {
+                  return (
+                    <Column
+                      onClick={props.selectProject}
+                      key={project.id}
+                      id={project.id}
+                      background={project.image}
+                      className="col-12 col-xs-12 col-sm-12 col-md-3"
+                    >
+                      <LinkContainer>
+                        <p>{project.name}</p>
+                        <div className="d-flex justify-content-center">
+                          <ProjectLink>
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Github
+                            </a>
+                          </ProjectLink>
+                          <ProjectLink>
+                            <a
+                              href={project.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Demo
+                            </a>
+                          </ProjectLink>
+                        </div>
+                      </LinkContainer>
+                    </Column>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        </ProjectContainer>
-      </div>
-    </Container>
+          </ProjectContainer>
+        </div>
+      </Container>
+      <Wave
+        className="d-lg-block d-none"
+        fill={colors.blue}
+        paused={false}
+        options={{
+          height: 70,
+          amplitude: 50,
+          speed: 0.15,
+          points: 2
+        }}
+      />
+    </PageContainer>
   );
 };
 

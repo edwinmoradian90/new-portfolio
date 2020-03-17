@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import ReactLoading from "react-loading";
-import { Container, Header, Logo } from "../../styles/styles";
+import { Container, Header, Logo, PageContainer } from "../../styles/styles";
 import colors from "../../styles/colors/colors";
 import Typical from "react-typical";
+import Wave from "react-wavify";
 
 const CardContainer = styled.div`
   display: flex;
@@ -51,44 +52,57 @@ const HomeView = props => {
     );
   }
   return (
-    <Container darkMode={props.darkMode}>
-      <div className="d-flex justify-content-center">
-        <CardContainer>
-          <Header>
-            Hello. <br /> I'm Ed, <br />
-            <Typical
-              steps={[
-                "",
-                2000,
-                "Developer.",
-                5000,
-                "Physicist.",
-                5000,
-                "Musician.",
-                5000,
-                "Coffee.",
-                5000
-              ]}
-              loop={Infinity}
-            />
-          </Header>
-          <SubHeader className="d-flex justify-content-between">
-            {props.logos.map((logo, i) => {
-              return <Logo key={i}>{logo}</Logo>;
-            })}
-          </SubHeader>
-          <Contact
-            darkMode={props.darkMode}
-            className="text-decoration-none"
-            href="mailto:edwin.moradian90@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CONTACT ME
-          </Contact>
-        </CardContainer>
-      </div>
-    </Container>
+    <PageContainer darkMode={props.darkMode}>
+      <Container darkMode={props.darkMode}>
+        <div className="d-flex justify-content-center">
+          <CardContainer>
+            <Header>
+              Hello. <br /> I'm Ed, <br />
+              <Typical
+                steps={[
+                  "",
+                  2000,
+                  "Developer.",
+                  5000,
+                  "Physicist.",
+                  5000,
+                  "Musician.",
+                  5000,
+                  "Coffee.",
+                  5000
+                ]}
+                loop={Infinity}
+              />
+            </Header>
+            <SubHeader className="d-flex justify-content-between">
+              {props.logos.map((logo, i) => {
+                return <Logo key={i}>{logo}</Logo>;
+              })}
+            </SubHeader>
+            <Contact
+              darkMode={props.darkMode}
+              className="text-decoration-none"
+              href="mailto:edwin.moradian90@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CONTACT ME
+            </Contact>
+          </CardContainer>
+        </div>
+      </Container>
+      <Wave
+        className="d-md-block d-none"
+        fill={colors.blue}
+        paused={false}
+        options={{
+          height: 70,
+          amplitude: 50,
+          speed: 0.15,
+          points: 2
+        }}
+      />
+    </PageContainer>
   );
 };
 

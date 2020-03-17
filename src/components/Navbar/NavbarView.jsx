@@ -4,7 +4,7 @@ import colors from "../../styles/colors/colors";
 import { Link } from "react-router-dom";
 
 const Navbar = styled.div`
-  background: ${colors.black};
+  background: ${props => (props.darkMode ? colors.black : colors.white)};
   border-bottom: 2px solid ${colors.blue};
   height: 100vh;
   width: 80px;
@@ -73,7 +73,7 @@ const ActiveListItem = styled(ListItem)`
 const NavbarView = props => {
   console.log(props);
   return (
-    <Navbar className="navigation-container">
+    <Navbar darkMode={props.darkMode} className="navigation-container">
       <List className="navigation-menu">
         {props.icons.map((icon, i) => {
           if (icon.id < 3) {

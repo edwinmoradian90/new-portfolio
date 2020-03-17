@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ReactLoading from "react-loading";
 import { Container, Header, Logo } from "../../styles/styles";
 import colors from "../../styles/colors/colors";
 import Typical from "react-typical";
@@ -37,13 +38,20 @@ const Contact = styled.a`
   width: 270px;
   &:hover {
     background: ${colors.blue};
-    color: ${colors.lightBlack};
+    color: ${props => (props.darkMode ? colors.lightBlack : colors.white)};
   }
 `;
 
 const HomeView = props => {
+  if (props.loading) {
+    return (
+      <Container className="align-items-center">
+        <ReactLoading type={"bars"} color={colors.blue} width={"5em"} />
+      </Container>
+    );
+  }
   return (
-    <Container>
+    <Container darkMode={props.darkMode}>
       <div className="d-flex justify-content-center">
         <CardContainer>
           <Header>
@@ -70,6 +78,7 @@ const HomeView = props => {
             })}
           </SubHeader>
           <Contact
+            darkMode={props.darkMode}
             className="text-decoration-none"
             href="mailto:edwin.moradian90@gmail.com"
             target="_blank"

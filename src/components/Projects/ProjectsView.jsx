@@ -1,5 +1,6 @@
 import React from "react";
 import colors from "../../styles/colors/colors";
+import ReactLoading from "react-loading";
 import {
   Container,
   Header,
@@ -46,8 +47,15 @@ const ProjectLink = styled.p`
 `;
 
 const ProjectsView = props => {
+  if (props.loading) {
+    return (
+      <Container className="align-items-center">
+        <ReactLoading type={"bars"} color={colors.blue} width={"5em"} />
+      </Container>
+    );
+  }
   return (
-    <Container>
+    <Container darkMode={props.darkMode}>
       <div className="d-flex flex-column flex-lg-row justify-content-md-around m-auto">
         <InfoContainer className="m-auto d-flex flex-column justify-content-between">
           <Header>

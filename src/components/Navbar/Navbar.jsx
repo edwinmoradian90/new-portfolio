@@ -86,6 +86,7 @@ class Navbar extends Component {
     return (
       <div>
         <NavbarView
+          darkMode={this.props.darkMode}
           setCurrentPage={this.setCurrentPage}
           getIconName={this.getIconName}
           icons={this.state.icons}

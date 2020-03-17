@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import colors from "../styles/colors/colors";
 
-export const AppContainer = styled.div ``;
+let prevDarkMode = true;
+
+export const AppContainer = styled.div `
+    background: ${colors.black};
+`;
 
 export const Container = styled.section `
     box-sizing: border-box;
@@ -10,7 +14,19 @@ export const Container = styled.section `
     justify-content: center;
     width: calc(100vw - 80px);
     height: 100%;
-    background: ${colors.black};
+    background:${props => {
+        if(props.darkMode == null){
+            return prevDarkMode ? colors.black : colors.white;
+        } else
+
+        if(props.darkMode) {
+            prevDarkMode = props.darkMode;
+            return colors.black
+        } else {
+            prevDarkMode = props.darkMode;
+            return colors.white
+        }
+}};
 
     @media (max-width: 767px) {
         padding: 10px;
@@ -29,7 +45,7 @@ export const Header = styled.h1 `
 export const SubHeader = styled.div `
     color: ${colors.lightGray};
     padding: 40px 0px;
-    font-family: "Open Sans";
+    font-family: "Roboto";
     font-size: 0.8em;
     letter-spacing: 3px;
     line-height: 20px;

@@ -20,6 +20,7 @@ class Projects extends Component {
     super(props);
 
     this.state = {
+      loading: true,
       selectedProject: "",
       projects: [
         {
@@ -82,6 +83,12 @@ class Projects extends Component {
     };
   }
 
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1000);
+  };
+
   selectProject = e => {
     const selectedId = parseInt(e.target.id);
     console.log(selectedId);
@@ -89,16 +96,10 @@ class Projects extends Component {
       console.log(selectedId, project.id);
       if (selectedId === project.id) {
         project.selected = true;
-        this.setState(
-          {
-            ...this.state,
-            selectedProject: project,
-            projects: [...this.state.projects, project]
-          },
-          () => {
-            console.log("selected");
-          }
-        );
+        this.setState({
+          selectedProject: project,
+          projects: [...this.state.projects, project]
+        });
       }
     });
   };
@@ -107,10 +108,12 @@ class Projects extends Component {
     return (
       <div>
         <ProjectsView
+          darkMode={this.props.darkMode}
           selectProject={this.selectProject}
           selectedProject={this.state.selectedProject}
           projects={this.state.projects}
           logos={this.state.logos}
+          loading={this.state.loading}
         />
       </div>
     );

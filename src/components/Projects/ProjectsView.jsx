@@ -75,6 +75,8 @@ const ProjectsView = props => {
                   5000,
                   "Ruby.",
                   5000,
+                  "Firebase.",
+                  5000,
                   "PostgreSQL",
                   5000,
                   "Node.",
@@ -90,12 +92,12 @@ const ProjectsView = props => {
               />
             </Header>
             <SubHeader>
-              I have worked with Javascript, React, Rails, Ruby, PostgreSQL,
-              Node, HTML, CSS, Sass, and much more.
+              I have worked with Javascript, React, Rails, Ruby, Firebase,
+              PostgreSQL, Node, HTML, CSS, Sass, and more.
               <br />
               <br />
               The majority of my work is in Javascript, Rails, or Rails with
-              React. Language and tool agonstic.
+              React. Language and tool agnostic.
             </SubHeader>
             <LogoContainer className="d-flex flex-wrap justify-content-start">
               {props.logos.map((logo, i) => {

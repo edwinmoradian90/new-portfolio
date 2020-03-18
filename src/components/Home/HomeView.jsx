@@ -10,8 +10,11 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 400px;
-  width: 300px;
+  height: auto;
+  padding: 130px 80px;
+  margin: auto;
+  width: auto;
+  min-width: 450px;
 
   @media (max-width: 767px) {
     margin: auto;
@@ -32,11 +35,11 @@ const Contact = styled.a`
   border-radius: 3px;
   color: ${colors.blue};
   cursor: pointer;
-  font-size: 0.7em;
+  font-size: 0.6em;
   padding: 10px 30px;
   text-align: center;
   transition: 0.5s;
-  width: 270px;
+  width: 250px;
   &:hover {
     background: ${colors.blue};
     color: ${props => (props.darkMode ? colors.lightBlack : colors.white)};
@@ -57,7 +60,7 @@ const HomeView = props => {
         <div className="d-flex justify-content-center">
           <CardContainer>
             <Header>
-              Hello. <br /> I'm Ed, <br />
+              Hi. I'm Ed, <br />
               <Typical
                 steps={[
                   "",

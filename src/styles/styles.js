@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, {
+    keyframes
+} from "styled-components";
 import colors from "../styles/colors/colors";
 
 let prevDarkMode = true;
@@ -116,7 +118,13 @@ export const LogoContainer = styled.div `
     max-width: 100%;
 `;
 
+const fadeIn = keyframes `
+    from: {opacity: 0}
+    to: {opacity: 1}
+`
+
 export const Column = styled.div `
+    animation: ${fadeIn} ease-in 4s;
     color: ${colors.lightBlack};
     font-family: "Montserrat";
     font-size: 20px;
@@ -133,6 +141,7 @@ export const Column = styled.div `
     background: url(${props => props.background});
     background-size: auto;
     background-position: center;
+    background-repeat: no-repeat;
 
     &:hover {
         cursor: pointer;

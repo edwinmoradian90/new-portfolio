@@ -4,8 +4,8 @@ import colors from "../../styles/colors/colors";
 import { Link } from "react-router-dom";
 
 const Navbar = styled.div`
+  border-right: 2px solid ${colors.blue};
   background: ${props => (props.darkMode ? colors.black : colors.white)};
-  border-bottom: 2px solid ${colors.blue};
   height: 100vh;
   width: 80px;
   z-index: 1000;

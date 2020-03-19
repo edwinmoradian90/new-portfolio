@@ -30,7 +30,7 @@ const ColorModes = styled.div`
   font-size: 1.5em;
   cursor: pointer;
   transition: 0.2s;
-  padding: 20px;
+  padding: 15px;
   animation: ${slideIn} 1s ease-in 1;
   &:hover {
     color: ${colors.blue};

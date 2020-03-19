@@ -9,6 +9,7 @@ class Home extends Component {
     super(props);
 
     this.state = {
+      loaded: false,
       loading: true,
       logos: [<MdComputer />, <DiAtom />, <MdMusicNote />, <GiCoffeeCup />]
     };
@@ -16,7 +17,7 @@ class Home extends Component {
 
   componentDidMount = () => {
     setTimeout(() => {
-      this.setState({ loading: false });
+      this.setState({ loading: false, loaded: true });
     }, 1000);
   };
 
@@ -26,6 +27,7 @@ class Home extends Component {
         <HomeView
           darkMode={this.props.darkMode}
           loading={this.state.loading}
+          loaded={this.state.loaded}
           logos={this.state.logos}
         />
       </div>

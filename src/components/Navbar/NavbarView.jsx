@@ -1,9 +1,22 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import colors from "../../styles/colors/colors";
 import { Link } from "react-router-dom";
 
+const fadeInLeft = keyframes`
+  from {
+    opacity: 0;
+    width: 0px;
+  }
+
+  to {
+    opacity: 1;
+    width: 80px;
+  }
+`;
+
 const Navbar = styled.div`
+  animation: ${fadeInLeft} linear 1s;
   border-right: 2px solid ${colors.blue};
   background: ${props => (props.darkMode ? colors.black : colors.white)};
   height: 100vh;

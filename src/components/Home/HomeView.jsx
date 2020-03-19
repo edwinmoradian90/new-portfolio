@@ -1,12 +1,34 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import ReactLoading from "react-loading";
 import { Container, Header, Logo, PageContainer } from "../../styles/styles";
 import colors from "../../styles/colors/colors";
 import Typical from "react-typical";
 import Wave from "react-wavify";
 
+const slideDown = keyframes`
+  from {
+   transform: translateY(-40px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
 const CardContainer = styled.div`
+  animation: ${slideDown} linear 1s;
+  animation-iteration-count: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,25 +47,37 @@ const CardContainer = styled.div`
 `;
 
 const SubHeader = styled.div`
+  animation: ${fadeIn} 1s forwards 1;
+  animation-delay: 2s;
+  opacity: ${props => (props.loaded ? 1 : 0)};
   color: ${colors.lightGray};
   font-size: 1em;
   margin-bottom: 30px;
 `;
 
 const Contact = styled.a`
-  border: 2px solid ${colors.blue};
+  animation: ${fadeIn} 1s forwards;
+  animation-delay: 2s;
+  background: ${colors.blue};
   border-radius: 3px;
-  color: ${colors.blue};
+  color: ${props => (props.darkMode ? colors.lightBlack : colors.white)};
   cursor: pointer;
   font-size: 0.6em;
   padding: 10px 30px;
+  opacity: 0;
   text-align: center;
   transition: 0.5s;
   width: 250px;
   &:hover {
-    background: ${colors.blue};
+    background: ${colors.purple};
     color: ${props => (props.darkMode ? colors.lightBlack : colors.white)};
   }
+`;
+
+const StyledWave = styled(Wave)`
+  animation: ${fadeIn} linear 1s forwards;
+  animation-delay: 3s;
+  opacity: 0;
 `;
 
 const HomeView = props => {
@@ -79,7 +113,11 @@ const HomeView = props => {
             </Header>
             <SubHeader className="d-flex justify-content-between">
               {props.logos.map((logo, i) => {
-                return <Logo key={i}>{logo}</Logo>;
+                return (
+                  <Logo counter={i} key={i}>
+                    {logo}
+                  </Logo>
+                );
               })}
             </SubHeader>
             <Contact
@@ -94,7 +132,7 @@ const HomeView = props => {
           </CardContainer>
         </div>
       </Container>
-      <Wave
+      <StyledWave
         className="d-md-block d-none"
         fill={colors.blue}
         paused={false}

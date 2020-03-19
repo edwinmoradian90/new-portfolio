@@ -21,18 +21,18 @@ const AboutView = props => {
     return (
       <PageContainer darkMode={props.darkMode}>
         <Container darkMode={props.darkMode} className="align-items-center">
-          <div className="p-sm-3">
+          <div className="p-sm-2">
             <Header>
               <Typical steps={["About me."]} />
             </Header>
             <SubHeader>
-              I am a physicist and a web developer with several years of
-              experience.
+              Web developer with a background in physics and several years of
+              experience developing web applications.
               <br />
               <br />
-              I have experience with many different tools, but my favorites have
-              to be plain Javascript, Rails, or React on top of Rails for
-              full-stack projects. <br />
+              Familiar with various web languages and tools, but primarily work
+              with plain Javascript, Ruby on Rails, or React on top of Ruby on
+              Rails for full-stack projects. <br />
               <br />
               In my free time, I am likely building a project, learning
               something new, or both. :)

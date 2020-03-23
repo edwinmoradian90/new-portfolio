@@ -24,23 +24,23 @@ class Projects extends Component {
       selectedProject: "",
       projects: [
         {
-          name: "Battleship",
+          name: "News Week Clone",
           id: 0,
+          image: newsweek,
+          selected: false,
+          github: "https://github.com/edwinmoradian90/newsweek-clone-bootstrap",
+          demo:
+            "https://raw.githack.com/edwinmoradian90/newsweek-clone-bootstrap/master/index.html"
+        },
+        {
+          name: "Battleship",
+          id: 1,
           image: battleship,
           selected: false,
           github:
             "https://github.com/edwinmoradian90/battleship/tree/battleship-features",
           demo:
             "https://raw.githack.com/edwinmoradian90/battleship/battleship-features/dist/index.html"
-        },
-        {
-          name: "News Week Clone",
-          id: 1,
-          image: newsweek,
-          selected: false,
-          github: "https://github.com/edwinmoradian90/newsweek-clone-bootstrap",
-          demo:
-            "https://raw.githack.com/edwinmoradian90/newsweek-clone-bootstrap/master/index.html"
         },
         {
           name: "Ecommerce",

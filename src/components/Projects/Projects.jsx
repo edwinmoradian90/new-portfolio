@@ -40,7 +40,7 @@ class Projects extends Component {
           github:
             "https://github.com/edwinmoradian90/battleship/tree/battleship-features",
           demo:
-            "https://raw.githack.com/edwinmoradian90/battleship/battleship-features/dist/index.html"
+            "https://raw.githack.com/edwinmoradian90/battleship/development/dist/index.html"
         },
         {
           name: "Ecommerce",
@@ -57,7 +57,7 @@ class Projects extends Component {
           selected: false,
           github: "https://github.com/edwinmoradian90/tic-tac-toe_js",
           demo:
-            "https://raw.githack.com/edwinmoradian90/tic-tac-toe_js/game-features/index.html"
+            "https://raw.githack.com/edwinmoradian90/tic-tac-toe_js/development/index.html"
         },
         {
           name: "Facebook clone",

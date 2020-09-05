@@ -1,16 +1,16 @@
 import styled, {
-    keyframes
+  keyframes
 } from "styled-components";
 import colors from "../styles/colors/colors";
 
 let prevDarkMode = true;
 
-export const fadeIn = keyframes `
+export const fadeIn = keyframes`
     from: {opacity: 0}
     to: {opacity: 1}
 `;
 
-export const logoLights = keyframes `
+export const logoLights = keyframes`
    from {
         color: ${colors.blue};
    } 
@@ -20,11 +20,11 @@ export const logoLights = keyframes `
    }
 `;
 
-export const AppContainer = styled.div `
+export const AppContainer = styled.div`
   background: ${colors.black};
 `;
 
-export const Container = styled.section `
+export const Container = styled.section`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -33,13 +33,13 @@ export const Container = styled.section `
   height: 100%;
   background: ${props => {
     if (props.darkMode == null) {
-      return prevDarkMode ? colors.black : colors.white;
+      return prevDarkMode ? colors.white : colors.black;
     } else if (props.darkMode) {
       prevDarkMode = props.darkMode;
-      return colors.black;
+      return colors.white;
     } else {
       prevDarkMode = props.darkMode;
-      return colors.white;
+      return colors.black;
     }
   }};
 
@@ -50,14 +50,14 @@ export const Container = styled.section `
   }
 `;
 
-export const Header = styled.h1 `
+export const Header = styled.h1`
   color: ${colors.blue};
   font-size: 3em;
   font-family: "Montserrat";
 `;
 
-export const SubHeader = styled.div `
-  color: ${colors.lightGray};
+export const SubHeader = styled.div`
+  color: ${props => (props.darkMode ? colors.black : colors.lightGray)};
   padding: 40px 0px;
   font-family: "Roboto";
   font-size: 0.8em;
@@ -71,11 +71,11 @@ export const SubHeader = styled.div `
   }
 `;
 
-export const Form = styled.form `
+export const Form = styled.form`
   width: 500px;
 `;
 
-export const Input = styled.input `
+export const Input = styled.input`
   border: 0;
   background: ${colors.lightBlack};
   color: ${colors.lightGray};
@@ -88,7 +88,7 @@ export const Input = styled.input `
   }
 `;
 
-export const TextArea = styled.textarea `
+export const TextArea = styled.textarea`
   border: 0;
   background: ${colors.lightBlack};
   color: ${colors.lightGray};
@@ -102,7 +102,7 @@ export const TextArea = styled.textarea `
   }
 `;
 
-export const Button = styled.button `
+export const Button = styled.button`
   background: ${colors.black};
   border: 1px solid ${colors.blue};
   border-radius: 3px;
@@ -116,7 +116,7 @@ export const Button = styled.button `
   }
 `;
 
-export const Logo = styled.div `
+export const Logo = styled.div`
   color: ${colors.blue};
   font-size: 2em;
   margin-right: 10px;
@@ -128,11 +128,11 @@ export const Logo = styled.div `
   }
 `;
 
-export const LogoContainer = styled.div `
+export const LogoContainer = styled.div`
   max-width: 100%;
 `;
 
-export const Column = styled.div `
+export const Column = styled.div`
   animation: ${fadeIn} ease-in 4s;
   color: ${colors.lightBlack};
   font-family: "Montserrat";
@@ -163,10 +163,10 @@ export const Column = styled.div `
   }
 `;
 
-export const PageContainer = styled.div `
+export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background: ${props => (props.darkMode ? colors.black : colors.white)};
+  background: ${props => (props.darkMode ? colors.white : colors.black)};
   height: 100%;
 
   @media (max-width: 767px) {

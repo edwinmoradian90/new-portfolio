@@ -1,10 +1,10 @@
 const colors = {
-    black: "#000000",
+    black: "#333333",
     //blue: "#00FFCC",
     blue: "#00c2ec",
     lightBlue: "#00c2ec",
-    lightBlack: "#222222",
-    lightGray: "#444444",
+    lightBlack: "#DCDCDC",
+    lightGray: "#DCDCDC",
     white: "#ffffff",
     yellow: "#ffcc00",
     purple: "#5456a4",

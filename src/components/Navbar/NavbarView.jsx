@@ -18,7 +18,7 @@ const fadeInLeft = keyframes`
 const Navbar = styled.div`
   animation: ${fadeInLeft} linear 1s;
   border-right: 2px solid ${colors.blue};
-  background: ${props => (props.darkMode ? colors.black : colors.white)};
+  background: ${props => (props.darkMode ? colors.white : colors.black)};
   height: 100vh;
   width: 80px;
   z-index: 1000;
@@ -103,19 +103,19 @@ const NavbarView = props => {
                 {icon.component}
               </ActiveListItem>
             ) : (
-              <ListItem
-                data-toggle="tooltip"
-                data-placement="top"
-                title={icon.name}
-                onClick={props.setCurrentPage}
-                to={icon.link}
-                key={icon.id}
-                id={icon.id}
-                className="navigation-item"
-              >
-                {icon.component}
-              </ListItem>
-            );
+                <ListItem
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title={icon.name}
+                  onClick={props.setCurrentPage}
+                  to={icon.link}
+                  key={icon.id}
+                  id={icon.id}
+                  className="navigation-item"
+                >
+                  {icon.component}
+                </ListItem>
+              );
           } else {
             return (
               <ATagLink

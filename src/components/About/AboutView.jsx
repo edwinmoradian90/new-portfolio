@@ -25,7 +25,7 @@ const AboutView = props => {
             <Header>
               <Typical steps={["About me."]} />
             </Header>
-            <SubHeader>
+            <SubHeader darkMode={props.darkMode}>
               Web developer with a background in physics and several years of
               experience developing web applications.
               <br />

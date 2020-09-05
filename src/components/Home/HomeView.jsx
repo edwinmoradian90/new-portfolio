@@ -60,7 +60,7 @@ const Contact = styled.a`
   animation-delay: 2s;
   background: ${colors.blue};
   border-radius: 3px;
-  color: ${props => (props.darkMode ? colors.lightBlack : colors.white)};
+  color: ${props => (props.darkMode ? colors.white : colors.lightBlack)};
   cursor: pointer;
   font-size: 0.6em;
   padding: 10px 30px;
@@ -70,7 +70,7 @@ const Contact = styled.a`
   width: 250px;
   &:hover {
     background: ${colors.purple};
-    color: ${props => (props.darkMode ? colors.lightBlack : colors.white)};
+    color: ${props => (props.darkMode ? colors.white : colors.lightBlack)};
   }
 `;
 

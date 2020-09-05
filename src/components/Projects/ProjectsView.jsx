@@ -91,7 +91,7 @@ const ProjectsView = props => {
                 loop={Infinity}
               />
             </Header>
-            <SubHeader>
+            <SubHeader darkMode={props.darkMode}>
               I have worked with Javascript, React, Rails, Ruby, Firebase,
               PostgreSQL, Node, HTML, CSS, Sass, and more.
               <br />

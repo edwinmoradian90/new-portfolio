@@ -37,6 +37,10 @@ const ColorModes = styled.div`
   }
 `;
 
+const AppContainer = styled.div`
+  background: ${props => props.darkMode ? colors.white : colors.black};
+`
+
 export default class App extends Component {
   constructor() {
     super();
@@ -63,7 +67,7 @@ export default class App extends Component {
       return <ReactLoading type={"bars"} color={colors.blue} />;
     }
     return (
-      <div className="App">
+      <AppContainer darkMode={this.state.darkMode} className="App">
         <Router>
           <div className="d-flex flex-sm-column flex-md-row h-sm-100">
             <Navbar darkMode={this.state.darkMode} />{" "}
@@ -88,7 +92,7 @@ export default class App extends Component {
             </Switch>{" "}
           </div>{" "}
         </Router>{" "}
-      </div>
+      </AppContainer>
     );
   }
 }

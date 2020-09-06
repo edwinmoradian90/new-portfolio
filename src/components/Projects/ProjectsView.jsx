@@ -22,6 +22,7 @@ const InfoContainer = styled.div`
 
 const ProjectContainer = styled.div`
   width: 100%;
+  max-width: 100vw;
 `;
 
 const LinkContainer = styled.div`
@@ -61,7 +62,7 @@ const ProjectsView = props => {
       <Container darkMode={props.darkMode}>
         <div className="d-flex flex-column flex-lg-row justify-content-md-around m-auto">
           <InfoContainer className="m-auto d-flex flex-column justify-content-between">
-            <Header>
+            <Header className="px-2">
               Projects. <br />
               <Typical
                 steps={[
@@ -91,7 +92,7 @@ const ProjectsView = props => {
                 loop={Infinity}
               />
             </Header>
-            <SubHeader darkMode={props.darkMode}>
+            <SubHeader className="px-2" darkMode={props.darkMode}>
               I have worked with Javascript, React, Rails, Ruby, Firebase,
               PostgreSQL, Node, HTML, CSS, Sass, and more.
               <br />
@@ -101,7 +102,7 @@ const ProjectsView = props => {
             </SubHeader>
             <LogoContainer className="d-flex flex-wrap justify-content-start">
               {props.logos.map((logo, i) => {
-                return <Logo key={i}>{logo}</Logo>;
+                return <Logo className="px-2" key={i}>{logo}</Logo>;
               })}
             </LogoContainer>
           </InfoContainer>

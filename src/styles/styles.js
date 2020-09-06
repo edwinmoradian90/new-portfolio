@@ -168,8 +168,11 @@ export const PageContainer = styled.div`
   flex-direction: column;
   background: ${props => (props.darkMode ? colors.white : colors.black)};
   height: 100%;
+  max-width: 100vw;
 
   @media (max-width: 767px) {
     height: auto;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 `;

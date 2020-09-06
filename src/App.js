@@ -13,27 +13,29 @@ import { FaSun, FaMoon } from "react-icons/fa";
 const slideIn = keyframes`
   from {
     top: 0%;
-    color: ${colors.blue};
-    transform: rotate(180deg);
+    color: ${colors.lightGrey};
+    transform: rotate(0deg);
   }
   to {
-    top: 7%;
-    color: ${colors.lightGray};
-    tranform: rotate(0deg);
+    top: 5%;
+    color: ${colors.blue};
+    tranform: rotate(180deg);
   }
 `;
 
 const ColorModes = styled.div`
+  color: ${colors.blue};
   position: absolute;
-  top: 7%;
-  right: 7%;
+  top: 5%;
+  right: 5%;
   font-size: 1.5em;
   cursor: pointer;
   transition: 0.2s;
   padding: 15px;
   animation: ${slideIn} 1s ease-in 1;
   &:hover {
-    color: ${colors.blue};
+    transform: scale(1.1);
+    color: yellow;
   }
 `;
 

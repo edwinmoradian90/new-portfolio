@@ -30,7 +30,8 @@ class Projects extends Component {
           selected: false,
           github: "https://github.com/edwinmoradian90/newsweek-clone-bootstrap",
           demo:
-            "https://raw.githack.com/edwinmoradian90/newsweek-clone-bootstrap/master/index.html"
+            "https://raw.githack.com/edwinmoradian90/newsweek-clone-bootstrap/master/index.html",
+          text: "A Newsweek clone built to replicate the popular news outlet, 'Newsweek'. Built with Html, CSS, and Bootstrap 4."
         },
         {
           name: "Battleship",
@@ -40,7 +41,8 @@ class Projects extends Component {
           github:
             "https://github.com/edwinmoradian90/battleship/tree/battleship-features",
           demo:
-            "https://raw.githack.com/edwinmoradian90/battleship/development/dist/index.html"
+            "https://raw.githack.com/edwinmoradian90/battleship/development/dist/index.html",
+          text: "A battleship game with a space theme, boat placement, computer opponent, and more. Built with JavaScript."
         },
         {
           name: "Ecommerce",
@@ -48,7 +50,8 @@ class Projects extends Component {
           image: ecommerce,
           selected: false,
           github: "https://github.com/edwinmoradian90/ecommerce_webapp",
-          demo: "https://stark-coast-27283.herokuapp.com/"
+          demo: "https://stark-coast-27283.herokuapp.com/",
+          text: "An ecommerce application with login, checkout, payment, and more. Built with React and Nodejs."
         },
         {
           name: "Tic-Tac-Toe",
@@ -57,7 +60,8 @@ class Projects extends Component {
           selected: false,
           github: "https://github.com/edwinmoradian90/tic-tac-toe_js",
           demo:
-            "https://raw.githack.com/edwinmoradian90/tic-tac-toe_js/development/index.html"
+            "https://raw.githack.com/edwinmoradian90/tic-tac-toe_js/development/index.html",
+          text: "A tic-tac-toe game with two players, name selection, and game end and rest. Built with JavaScript."
         },
         {
           name: "Facebook clone",
@@ -65,7 +69,8 @@ class Projects extends Component {
           image: facebook,
           selected: false,
           github: "https://github.com/edwinmoradian90/odin-facebook",
-          demo: "https://cryptic-ridge-31466.herokuapp.com"
+          demo: "https://cryptic-ridge-31466.herokuapp.com",
+          text: "A FaceBook clone with login, friends and friend requests, timeline, and more. Built with Ruby and Rails."
         }
       ],
       logos: [

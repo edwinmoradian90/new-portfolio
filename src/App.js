@@ -33,10 +33,6 @@ const ColorModes = styled.div`
   transition: 0.2s;
   padding: 15px;
   animation: ${slideIn} 1s ease-in 1;
-  &:hover {
-    transform: scale(1.1);
-    color: yellow;
-  }
 `;
 
 const AppContainer = styled.div`
@@ -75,7 +71,7 @@ export default class App extends Component {
             <Navbar darkMode={this.state.darkMode} />{" "}
             <ColorModes onClick={this.toggleColorModes}>
               {" "}
-              {this.state.darkMode ? <FaSun /> : <FaMoon />}{" "}
+              {this.state.darkMode ? <FaMoon /> : <FaSun />}{" "}
             </ColorModes>{" "}
             <Switch>
               <Route

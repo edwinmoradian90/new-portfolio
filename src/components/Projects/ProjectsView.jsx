@@ -120,6 +120,7 @@ const ProjectsView = props => {
                     >
                       <LinkContainer>
                         <p>{project.name}</p>
+                        <small className="projectText">{project.text}</small>
                         <div className="d-flex justify-content-center">
                           <ProjectLink>
                             <a

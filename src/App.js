@@ -14,12 +14,12 @@ const slideIn = keyframes`
   from {
     top: 0%;
     color: ${colors.lightGrey};
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
   to {
     top: 5%;
     color: ${colors.blue};
-    tranform: rotate(180deg);
+    tranform: rotate(0deg);
   }
 `;
 
@@ -27,7 +27,7 @@ const ColorModes = styled.div`
   color: ${colors.blue};
   position: absolute;
   top: 5%;
-  right: 5%;
+  right: 3%;
   font-size: 1.5em;
   cursor: pointer;
   transition: 0.2s;

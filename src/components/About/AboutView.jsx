@@ -22,10 +22,10 @@ const AboutView = props => {
       <PageContainer darkMode={props.darkMode}>
         <Container darkMode={props.darkMode} className="align-items-center">
           <div className="p-sm-2">
-            <Header>
+            <Header className="ml-3">
               <Typical steps={["About me."]} />
             </Header>
-            <SubHeader darkMode={props.darkMode}>
+            <SubHeader className="px-3" darkMode={props.darkMode}>
               Web developer with a background in physics and several years of
               experience developing web applications.
               <br />

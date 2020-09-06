@@ -78,7 +78,7 @@ const ProjectsView = props => {
                   5000,
                   "Firebase.",
                   5000,
-                  "PostgreSQL",
+                  "PostgreSQL.",
                   5000,
                   "Node.",
                   5000,

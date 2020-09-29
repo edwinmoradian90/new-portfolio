@@ -140,11 +140,11 @@ export const Column = styled.div`
   height: auto;
   min-height: 200px;
   max-height: 200px;
+  margin:10px 10px;
   box-sizing: border-box;
   padding: 0;
   width: 100%;
   min-width: 200px;
-  margin: ${props => props.margin ? props.margin : '10px 10px'};
   transition: 0.4s;
   text-align: center;
   background: url(${props => props.background});
@@ -160,6 +160,7 @@ export const Column = styled.div`
   @media (max-width: 576px) {
     max-width: 100vw;
     width: 100vw;
+    margin: ${props => props.margin ? props.margin : '10px 10px'};
   }
 `;
 

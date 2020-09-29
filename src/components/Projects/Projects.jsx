@@ -75,7 +75,7 @@ class Projects extends Component {
           imageSize: "180%",
           selected: false,
           github: "https://github.com/edwinmoradian90/calculator",
-          demo: "",
+          demo: "https://calculator-a6ddd.web.app/",
           text: "A calculator with all adding, subtracting, divding, and multiplying functionality. Built with React."
         },
         {

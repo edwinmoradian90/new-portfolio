@@ -9,11 +9,11 @@ import {
 } from "react-icons/io";
 import { FaGit } from "react-icons/fa";
 import { DiRubyRough, DiRor, DiReact, DiPostgresql } from "react-icons/di";
-import battleship from "../../assets/images/battleship.jpg";
+import tracker from "../../assets/images/tracker.png";
 import newsweek from "../../assets/images/newsweek.jpg";
 import ecommerce from "../../assets/images/ecommerce.jpg";
-import tictactoe from "../../assets/images/tictactoe.jpg";
-import facebook from "../../assets/images/facebook.jpg";
+import bookstore from "../../assets/images/bookstore.png";
+import facebook from "../../assets/images/fakebook.png";
 
 class Projects extends Component {
   constructor(props) {
@@ -24,9 +24,22 @@ class Projects extends Component {
       selectedProject: "",
       projects: [
         {
-          name: "News Week Clone",
+          name: "Tracker App",
           id: 0,
+          image: tracker,
+          imageSize: "125px 250px",
+          selected: false,
+          github:
+            "https://github.com/edwinmoradian90/tracker-app",
+          demo:
+            "https://tracker-app-react-rails.herokuapp.com",
+          text: "A tracking app that trackers amount driven, fuel usage, and driving limit. Built with React, Redux, and Rails."
+        },
+        {
+          name: "News Week Clone",
+          id: 1,
           image: newsweek,
+          imageSize: "150%",
           selected: false,
           github: "https://github.com/edwinmoradian90/newsweek-clone-bootstrap",
           demo:
@@ -34,44 +47,36 @@ class Projects extends Component {
           text: "A Newsweek clone built to replicate the popular news outlet, 'Newsweek'. Built with Html, CSS, and Bootstrap 4."
         },
         {
-          name: "Battleship",
-          id: 1,
-          image: battleship,
+          name: "Book Store CMS",
+          id: 2,
+          image: bookstore,
+          imageSize: "130%",
           selected: false,
-          github:
-            "https://github.com/edwinmoradian90/battleship/tree/battleship-features",
+          github: "https://github.com/edwinmoradian90/bookstore-cms",
           demo:
-            "https://raw.githack.com/edwinmoradian90/battleship/development/dist/index.html",
-          text: "A battleship game with a space theme, boat placement, computer opponent, and more. Built with JavaScript."
+            "https://microverse-bookstore.herokuapp.com",
+          text: "A book store CMS that handles and tracks books read. Built with React, Redux, and Styled Components."
+        },
+        {
+          name: "Facebook clone",
+          id: 3,
+          image: facebook,
+          imageSize: "130%",
+          selected: false,
+          github: "https://github.com/edwinmoradian90/facebook-clone",
+          demo: "https://shielded-taiga-48885.herokuapp.com",
+          text: "A FaceBook clone with login, friends and friend requests, timeline, and more. Built with Ruby and Rails."
         },
         {
           name: "Ecommerce",
-          id: 2,
+          id: 4,
           image: ecommerce,
+          imageSize: "100% 100%",
           selected: false,
           github: "https://github.com/edwinmoradian90/ecommerce_webapp",
           demo: "https://stark-coast-27283.herokuapp.com/",
           text: "An ecommerce application with login, checkout, payment, and more. Built with React and Nodejs."
         },
-        {
-          name: "Tic-Tac-Toe",
-          id: 3,
-          image: tictactoe,
-          selected: false,
-          github: "https://github.com/edwinmoradian90/tic-tac-toe_js",
-          demo:
-            "https://raw.githack.com/edwinmoradian90/tic-tac-toe_js/development/index.html",
-          text: "A tic-tac-toe game with two players, name selection, and game end and rest. Built with JavaScript."
-        },
-        {
-          name: "Facebook clone",
-          id: 4,
-          image: facebook,
-          selected: false,
-          github: "https://github.com/edwinmoradian90/odin-facebook",
-          demo: "https://cryptic-ridge-31466.herokuapp.com",
-          text: "A FaceBook clone with login, friends and friend requests, timeline, and more. Built with Ruby and Rails."
-        }
       ],
       logos: [
         <IoLogoJavascript />,

@@ -148,7 +148,7 @@ export const Column = styled.div`
   transition: 0.4s;
   text-align: center;
   background: url(${props => props.background});
-  background-size: auto;
+  background-size: ${props => props.backgroundSize ? props.backgroundSize : 'auto'};
   background-position: center;
   background-repeat: no-repeat;
 

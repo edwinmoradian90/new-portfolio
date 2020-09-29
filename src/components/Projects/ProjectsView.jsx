@@ -116,6 +116,7 @@ const ProjectsView = props => {
                       key={project.id}
                       id={project.id}
                       background={project.image}
+                      backgroundSize={project.imageSize}
                       className="col-12 col-xs-12 col-sm-12 col-md-3"
                     >
                       <LinkContainer>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import HomeView from "./HomeView";
 import { MdComputer, MdMusicNote } from "react-icons/md";
 import { DiAtom } from "react-icons/di";
-import { GiCoffeeCup } from "react-icons/gi";
 
 class Home extends Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class Home extends Component {
     this.state = {
       loaded: false,
       loading: true,
-      logos: [<MdComputer />, <DiAtom />, <MdMusicNote />, <GiCoffeeCup />]
+      logos: [<MdComputer />, <DiAtom />, <MdMusicNote />]
     };
   }
 

@@ -84,7 +84,6 @@ const ActiveListItem = styled(ListItem)`
 `;
 
 const NavbarView = props => {
-  console.log(props);
   return (
     <Navbar darkMode={props.darkMode} className="navigation-container">
       <List className="navigation-menu">

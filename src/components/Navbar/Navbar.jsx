@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import NavbarView from "./NavbarView";
 import { MdHome, MdMarkunread, MdPerson } from "react-icons/md";
 import { FiGithub, FiLinkedin, FiCodesandbox } from "react-icons/fi";
@@ -61,11 +62,12 @@ class Navbar extends Component {
   };
 
   setCurrentPage = () => {
-    this.setState({ currentPage: window.location.pathname });
+    this.setState({ currentPage: this.props.location.pathname });
   };
 
   loadActiveIcon = () => {
-    const path = window.location.pathname;
+    const path = this.props.location.pathname;
+    console.log(path)
     const icons = this.state.icons;
     icons.forEach(icon => {
       icon.active = false;
@@ -79,7 +81,9 @@ class Navbar extends Component {
   componentDidUpdate = (prevProps, prevState) => {
     if (prevState.currentPage !== this.state.currentPage) {
       this.loadActiveIcon();
-    }
+    } else if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.loadActiveIcon();
+    };
   };
 
   render() {
@@ -96,4 +100,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

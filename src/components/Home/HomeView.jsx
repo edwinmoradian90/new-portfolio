@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import ReactLoading from "react-loading";
+import { Link } from "react-router-dom";
 import { Container, Header, Logo, PageContainer } from "../../styles/styles";
 import colors from "../../styles/colors/colors";
 import Typical from "react-typical";
@@ -55,7 +56,7 @@ const SubHeader = styled.div`
   margin-bottom: 30px;
 `;
 
-const Contact = styled.a`
+const Button = styled.a`
   animation: ${fadeIn} 1s forwards;
   animation-delay: 2s;
   background: ${colors.blue};
@@ -65,12 +66,29 @@ const Contact = styled.a`
   font-size: 0.6em;
   padding: 10px 30px;
   opacity: 0;
+  margin-bottom: 20px;
   text-align: center;
   transition: 0.5s;
   width: 250px;
   &:hover {
     background: ${colors.purple};
     color: ${props => (props.darkMode ? colors.white : colors.lightBlack)};
+  }
+`;
+
+const StyledLink = styled(Link)`
+  animation: ${fadeIn} 3s forwards;
+  color: ${colors.blue};
+  font-size: 16px;
+  font-weight: 300;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 250px;
+  &:hover {
+    color: ${colors.purple};
+    text-decoration: none;
+    transition: 0.5s;
   }
 `;
 
@@ -100,13 +118,11 @@ const HomeView = props => {
                   "",
                   2000,
                   "Developer.",
-                  5000,
+                  2000,
                   "Physicist.",
-                  5000,
+                  2000,
                   "Musician.",
-                  5000,
-                  "Coffee.",
-                  5000
+                  2000,
                 ]}
                 loop={Infinity}
               />
@@ -120,7 +136,7 @@ const HomeView = props => {
                 );
               })}
             </SubHeader>
-            <Contact
+            <Button
               darkMode={props.darkMode}
               className="text-decoration-none"
               href="mailto:edwin.moradian90@gmail.com"
@@ -128,7 +144,13 @@ const HomeView = props => {
               rel="noopener noreferrer"
             >
               CONTACT ME
-            </Contact>
+            </Button>
+            <StyledLink
+              darkMode={props.darkMode}
+              to="/projects"
+            >
+              See my projects
+            </StyledLink>
           </CardContainer>
         </div>
       </Container>

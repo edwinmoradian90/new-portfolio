@@ -14,6 +14,7 @@ import newsweek from "../../assets/images/newsweek.jpg";
 import ecommerce from "../../assets/images/ecommerce.jpg";
 import bookstore from "../../assets/images/bookstore.png";
 import facebook from "../../assets/images/fakebook.png";
+import calculator from "../../assets/images/calculator.png";
 
 class Projects extends Component {
   constructor(props) {
@@ -68,14 +69,25 @@ class Projects extends Component {
           text: "A FaceBook clone with login, friends and friend requests, timeline, and more. Built with Ruby and Rails."
         },
         {
-          name: "Ecommerce",
+          name: "Calculator",
           id: 4,
+          image: calculator,
+          imageSize: "180%",
+          selected: false,
+          github: "https://github.com/edwinmoradian90/calculator",
+          demo: "",
+          text: "A calculator with all adding, subtracting, divding, and multiplying functionality. Built with React."
+        },
+        {
+          name: "Ecommerce",
+          id: 5,
           image: ecommerce,
           imageSize: "100% 100%",
           selected: false,
           github: "https://github.com/edwinmoradian90/ecommerce_webapp",
           demo: "https://stark-coast-27283.herokuapp.com/",
-          text: "An ecommerce application with login, checkout, payment, and more. Built with React and Nodejs."
+          text: "My first project, an ecommerce application with login, checkout, payment, and more. Built with React and Nodejs.",
+          margin: "0 10px 100px 10px"
         },
       ],
       logos: [

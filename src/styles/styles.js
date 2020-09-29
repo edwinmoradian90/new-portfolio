@@ -144,7 +144,7 @@ export const Column = styled.div`
   padding: 0;
   width: 100%;
   min-width: 200px;
-  margin: 10px 10px;
+  margin: ${props => props.margin ? props.margin : '10px 10px'};
   transition: 0.4s;
   text-align: center;
   background: url(${props => props.background});

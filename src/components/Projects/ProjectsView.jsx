@@ -21,8 +21,8 @@ const InfoContainer = styled.div`
 `;
 
 const ProjectContainer = styled.div`
-  width: 100%;
   max-width: 100vw;
+  width: 100%;
 `;
 
 const LinkContainer = styled.div`
@@ -118,6 +118,7 @@ const ProjectsView = props => {
                       background={project.image}
                       backgroundSize={project.imageSize}
                       className="col-12 col-xs-12 col-sm-12 col-md-3"
+                      margin={project.margin}
                     >
                       <LinkContainer>
                         <p>{project.name}</p>
